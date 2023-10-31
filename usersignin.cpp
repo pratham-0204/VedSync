@@ -24,6 +24,7 @@ void usersignin::on_pushButton_clicked()
 
 void usersignin::on_pushButton_2_clicked()
 {
+
     QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
     QString path = QDir::toNativeSeparators(CURRENT);
     mydb.setDatabaseName(path);
