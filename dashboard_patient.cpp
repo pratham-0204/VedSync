@@ -13,6 +13,9 @@ vector<QString> pdoc;
 vector<QString> dname;
 vector<QString> sheduleddname;
 vector<QString> sheduleddoc;
+vector<QString> prescriptions;
+vector<QString> historytime;
+vector<QString> sheduledtime;
 Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name) :
     QMainWindow(parent),
     ui(new Ui::Dashboard_patient)
@@ -35,7 +38,8 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
         while (query.next()) {
             // Retrieve data from the query result
             pdoc.push_back(query.value(0).toString());
-
+            prescriptions.push_back(query.value(2).toString());
+            historytime.push_back(query.value(3).toString());
             // Process the retrieved data as needed
         }
     }
@@ -52,7 +56,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
 
     // Insert Data into appointments
     for(int i = 0 ; i < dname.size() ; i++){
-        ui->listWidget_3->addItem(pdoc[i]+" "+dname[i]);
+        ui->listWidget_3->addItem(dname[i]+" "+historytime[i]);
     }
 
     query.prepare("SELECT * FROM appointments WHERE pid = :pid AND prescription IS NULL");
@@ -61,6 +65,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
         while (query.next()) {
             // Retrieve data from the query result
             sheduleddoc.push_back(query.value(0).toString());
+            sheduledtime.push_back(query.value(3).toString());
 
             // Process the retrieved data as needed
         }
@@ -72,13 +77,13 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
     for(int i = 0 ; i < sheduleddoc.size() ; i++){
         query.bindValue(":id", sheduleddoc[i]);
         if (query.exec() && query.next()) {
-            sheduleddname.push_back(query.value(0).toString());
+            sheduleddname.push_back(query.value(1).toString());
         }
     }
 
     // Insert Data into appointments
     for(int i = 0 ; i < sheduleddname.size() ; i++){
-        ui->listWidget_2->addItem(sheduleddoc[i]+" "+sheduleddname[i]);
+        ui->listWidget_2->addItem(sheduleddname[i]+" "+sheduledtime[i]);
     }
 
 
@@ -157,5 +162,14 @@ void Dashboard_patient::on_listWidget_itemClicked(QListWidgetItem *item)
     this->hide();
     DoctorInfoAndAppointment * w = new DoctorInfoAndAppointment(this , arr);
     w->show();
+}
+
+
+void Dashboard_patient::on_listWidget_3_itemClicked(QListWidgetItem *item)
+{
+    int index = ui->listWidget_3->currentRow();
+    prescription * obj = new prescription(this , prescriptions[index]);
+    obj->show();
+
 }
 

@@ -8,6 +8,7 @@
 #include <QtDebug>
 #include <QFileInfo>
 #include<doctorinfoandappointment.h>
+#include<prescription.h>
 namespace Ui {
 class Dashboard_patient;
 }
@@ -27,6 +28,8 @@ private slots:
     void on_pushButton_clicked();
 
     void on_listWidget_itemClicked(QListWidgetItem *item);
+
+    void on_listWidget_3_itemClicked(QListWidgetItem *item);
 
 private:
     Ui::Dashboard_patient *ui;

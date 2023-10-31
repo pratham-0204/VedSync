@@ -17,6 +17,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     patientsignup.cpp \
+    prescription.cpp \
     signin.cpp \
     signup.cpp \
     usersignin.cpp
@@ -30,6 +31,7 @@ HEADERS += \
     doctorsignup.h \
     mainwindow.h \
     patientsignup.h \
+    prescription.h \
     signin.h \
     signup.h \
     usersignin.h
@@ -42,6 +44,7 @@ FORMS += \
     doctorsignup.ui \
     mainwindow.ui \
     patientsignup.ui \
+    prescription.ui \
     signin.ui \
     signup.ui \
     usersignin.ui
