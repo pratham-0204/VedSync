@@ -274,23 +274,13 @@ background-color: rgb(62, 62, 62);</string>
       <height>171</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>New Item</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>New Item</string>
-     </property>
-    </item>
    </widget>
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>680</x>
+      <x>650</x>
       <y>80</y>
-      <width>61</width>
+      <width>131</width>
       <height>21</height>
      </rect>
     </property>
@@ -303,7 +293,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>chat bot</string>
+     <string>latest appointment</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
