@@ -47,7 +47,7 @@ void usersignin::on_pushButton_2_clicked()
         }
         qry.prepare("SELECT * FROM doctors WHERE did = :did");
         qry.bindValue(":did", id);
-
+        QString name;
 
         if (qry.exec() && qry.next()) {
             // If a row is fetched, the PID exists
@@ -60,6 +60,7 @@ void usersignin::on_pushButton_2_clicked()
             qry.bindValue(":pid", id);
             if(qry.exec() && qry.next()){
                 dpassword = qry.value(6).toString();
+                name = qry.value(1).toString();
             }
             else{
                 QMessageBox::information(this , "" , "error occured");
@@ -68,7 +69,7 @@ void usersignin::on_pushButton_2_clicked()
                 mydb.close();
                 this->close();
 //                QMessageBox::information(this , "" , "closed");
-                Dashboard_patient *ww = new Dashboard_patient(this , id);
+                Dashboard_patient *ww = new Dashboard_patient(this , id , name);
                 ww->show();
 //                QMessageBox::information(this , "" , "closed");
 
@@ -89,6 +90,7 @@ void usersignin::on_pushButton_2_clicked()
                 QMessageBox::information(this , "" , "error occured");
             }
             if(dpassword.trimmed() == password.trimmed()){
+                mydb.close();
                 this->close();
                 Dashboard_doctor * ww = new Dashboard_doctor(this , id);
                 ww->show();
