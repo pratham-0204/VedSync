@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="apointments">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -23,21 +23,6 @@
       <height>361</height>
      </rect>
     </property>
-    <item>
-     <property name="text">
-      <string>alloo</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>yoo</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>pyaz</string>
-     </property>
-    </item>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -68,13 +53,13 @@
      <string>Logout</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="Doctor_name">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>30</x>
+      <y>0</y>
       <width>221</width>
-      <height>31</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -83,10 +68,10 @@
      </font>
     </property>
     <property name="text">
-     <string>Dr. Ambrish Vats</string>
+     <string>&lt;Doctor Name&gt;</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="patient_history">
     <property name="geometry">
      <rect>
       <x>275</x>
@@ -138,7 +123,7 @@
      <string>Current Patient</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="mark_complete_button">
     <property name="geometry">
      <rect>
       <x>139</x>
@@ -164,43 +149,30 @@
      <string>Skip</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="Patient_name">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>290</y>
-      <width>91</width>
-      <height>16</height>
+      <x>40</x>
+      <y>260</y>
+      <width>131</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Name of patient</string>
+     <string>&lt;Name of patient&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="p_id">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>310</y>
-      <width>49</width>
-      <height>16</height>
+      <x>40</x>
+      <y>280</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>P_id</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>330</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Phone</string>
+     <string>&lt;P_id&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -236,7 +208,7 @@ background-color: rgb(149, 149, 149);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>80</y>
       <width>221</width>
       <height>51</height>
@@ -245,36 +217,105 @@ background-color: rgb(149, 149, 149);</string>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QRadioButton" name="radioButton_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="text">
-        <string>RadioButton</string>
+        <string>Yes</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QRadioButton" name="radioButton">
        <property name="text">
-        <string>RadioButton</string>
+        <string>No</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="doctor_id">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;D_ID&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p_age_label">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>260</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;age&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="p_gender_label">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>280</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;gender&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>310</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prescription:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="prescription_input">
+    <property name="geometry">
+     <rect>
+      <x>43</x>
+      <y>329</y>
+      <width>201</width>
+      <height>71</height>
+     </rect>
+    </property>
+   </widget>
    <zorder>label_10</zorder>
    <zorder>layoutWidget</zorder>
-   <zorder>listWidget</zorder>
+   <zorder>apointments</zorder>
    <zorder>label</zorder>
    <zorder>pushButton</zorder>
-   <zorder>label_2</zorder>
-   <zorder>listWidget_2</zorder>
+   <zorder>Doctor_name</zorder>
+   <zorder>patient_history</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
-   <zorder>pushButton_2</zorder>
+   <zorder>mark_complete_button</zorder>
    <zorder>pushButton_3</zorder>
-   <zorder>label_6</zorder>
-   <zorder>label_7</zorder>
-   <zorder>label_8</zorder>
+   <zorder>Patient_name</zorder>
+   <zorder>p_id</zorder>
    <zorder>label_9</zorder>
+   <zorder>doctor_id</zorder>
+   <zorder>p_age_label</zorder>
+   <zorder>p_gender_label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>prescription_input</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

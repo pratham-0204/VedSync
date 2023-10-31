@@ -24,6 +24,7 @@ void usersignin::on_pushButton_clicked()
 
 void usersignin::on_pushButton_2_clicked()
 {
+
     QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
     QString path = QDir::toNativeSeparators(CURRENT);
     mydb.setDatabaseName(path);
@@ -89,6 +90,7 @@ void usersignin::on_pushButton_2_clicked()
                 QMessageBox::information(this , "" , "error occured");
             }
             if(dpassword.trimmed() == password.trimmed()){
+                mydb.close();
                 this->close();
                 Dashboard_doctor * ww = new Dashboard_doctor(this , id);
                 ww->show();

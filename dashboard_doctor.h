@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include <mainwindow.h>
 #include <active_appointment.h>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
+
 namespace Ui {
 class Dashboard_doctor;
 }
