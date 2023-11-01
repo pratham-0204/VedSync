@@ -104,6 +104,8 @@ void usersignin::on_pushButton_2_clicked()
         else{
             QMessageBox::information(this , "" , "account is not created");
         }
+
     }
+    mydb.close();
 }
 
