@@ -24,14 +24,13 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_listWidget_itemClicked(QListWidgetItem *item);
 
-//    void on_listWidget_currentRowChanged(int currentRow);
-
-//    void on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+    void on_Mark_btn_clicked();
 
 private:
     Ui::Dashboard_doctor *ui;
+    void closeAllQueriesAndTransactions();
+    void update_window();
 };
 
 #endif // DASHBOARD_DOCTOR_H

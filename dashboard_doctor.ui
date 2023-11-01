@@ -123,19 +123,6 @@
      <string>Current Patient</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="mark_complete_button">
-    <property name="geometry">
-     <rect>
-      <x>139</x>
-      <y>410</y>
-      <width>111</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Mark Complete</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
@@ -259,6 +246,9 @@ background-color: rgb(149, 149, 149);</string>
     <property name="text">
      <string>&lt;age&gt;</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
    </widget>
    <widget class="QLabel" name="p_gender_label">
     <property name="geometry">
@@ -271,6 +261,9 @@ background-color: rgb(149, 149, 149);</string>
     </property>
     <property name="text">
      <string>&lt;gender&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -296,6 +289,19 @@ background-color: rgb(149, 149, 149);</string>
      </rect>
     </property>
    </widget>
+   <widget class="QPushButton" name="Mark_btn">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>410</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark complete</string>
+    </property>
+   </widget>
    <zorder>label_10</zorder>
    <zorder>layoutWidget</zorder>
    <zorder>apointments</zorder>
@@ -306,7 +312,6 @@ background-color: rgb(149, 149, 149);</string>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
-   <zorder>mark_complete_button</zorder>
    <zorder>pushButton_3</zorder>
    <zorder>Patient_name</zorder>
    <zorder>p_id</zorder>
@@ -316,6 +321,7 @@ background-color: rgb(149, 149, 149);</string>
    <zorder>p_gender_label</zorder>
    <zorder>label_2</zorder>
    <zorder>prescription_input</zorder>
+   <zorder>Mark_btn</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
