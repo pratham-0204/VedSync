@@ -1,13 +1,27 @@
 #include "active_appointment.h"
 #include "ui_active_appointment.h"
 #include "DEFINITIONS.h"
+#include <QMessageBox>
 
-Active_appointment::Active_appointment(QWidget *parent , int s) :
+QString id;
+
+Active_appointment::Active_appointment(QWidget *parent , QString s) :
     QMainWindow(parent),
     ui(new Ui::Active_appointment)
 {
     ui->setupUi(this);
-    ui->label->setText(QString::number(s));
+    id = s;
+
+    QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
+    QString path = QDir::toNativeSeparators(CURRENT);
+    mydb.setDatabaseName(path);
+
+    if(!mydb.open()){
+        QMessageBox::information(this,"Connection info", "Not Connected");
+    }
+    else{
+
+    }
 }
 
 Active_appointment::~Active_appointment()
