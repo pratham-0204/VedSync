@@ -33,7 +33,7 @@ void patientsignup::on_pushButton_2_clicked()
     QString path = QDir::toNativeSeparators(CURRENT);
     mydb.setDatabaseName(path);
     if(!mydb.open()){
-        QMessageBox::information(this,"connection info", "not connected");
+        QMessageBox::information(this,"Connection Info", "Not Connected");
     }
     else{
 
@@ -73,10 +73,10 @@ void patientsignup::on_pushButton_2_clicked()
                     qry.bindValue(":email", email);
                     qry.bindValue(":password", password);
                     if(qry.exec()){
-                        QMessageBox::information(this , "" , "account created succussfully");
+                        QMessageBox::information(this , "" , "Account Created Succussfully");
                     }
                     else{
-                        QMessageBox::information(this , "notdone" , "account not created");
+                        QMessageBox::information(this , "Not Done" , "Failed to create account! \nPlease try again");
                     }
                     mydb.close();
                     this->close();
@@ -85,16 +85,16 @@ void patientsignup::on_pushButton_2_clicked()
 
                 }
                 else{
-                    QMessageBox::information(this , "" , "the user is already rgistered");
+                    QMessageBox::information(this , "Error" , "The user is already registered");
                 }
             }
 
             else{
-                QMessageBox::information(this , "" , "password and confirm password are not same");
+                QMessageBox::information(this , "Error" , "Passwords do not match");
             }
         }
         else{
-            QMessageBox::information(this , "" ,"fill all the details correctly");
+            QMessageBox::information(this , "Error" ,"Please fill all the deatils completely");
         }
         mydb.close();
     }
