@@ -51,12 +51,10 @@ void doctorsignup::on_pushButton_clicked()
         rating = 0;
         availability = 1;
         s1f = ui->s1f->time();
-        s2f = ui->s2f->time();
         s1t = ui->s1t->time();
-        s2t = ui->s2t->time();
 
         QSqlQuery qry;
-        qry.prepare("INSERT INTO doctors VALUES (:did,:name,:age,:gender,:specialization,:email,:clinicname,:clinicaddress,:license,:password,:fees,:s1f,:s1t,:s2f,:s2t,:rating,:availability)");
+        qry.prepare("INSERT INTO doctors VALUES (:did,:name,:age,:gender,:specialization,:email,:clinicname,:clinicaddress,:license,:password,:fees,:s1f,:s1t,:rating,:availability)");
         qry.bindValue(":did",did);
         qry.bindValue(":name",name);
         qry.bindValue(":age",age);
@@ -70,8 +68,6 @@ void doctorsignup::on_pushButton_clicked()
         qry.bindValue(":fees",fees);
         qry.bindValue(":s1f",s1f);
         qry.bindValue(":s1t",s1t);
-        qry.bindValue(":s2f",s2f);
-        qry.bindValue(":s2t",s2t);
         qry.bindValue(":rating",rating);
         qry.bindValue(":availability",availability);
 

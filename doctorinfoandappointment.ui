@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>DoctorInfoAndAppointment</class>
  <widget class="QMainWindow" name="DoctorInfoAndAppointment">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -33,6 +36,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -42,10 +48,13 @@
      </rect>
     </property>
     <property name="text">
-     <string>Book an appointment</string>
+     <string>doctor is not available</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -74,7 +83,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>625</x>
+      <x>710</x>
       <y>70</y>
       <width>49</width>
       <height>16</height>
@@ -87,7 +96,7 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>430</x>
       <y>70</y>
       <width>131</width>
       <height>16</height>
@@ -110,9 +119,9 @@
    <widget class="QListWidget" name="listWidget_3">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>390</x>
       <y>90</y>
-      <width>231</width>
+      <width>211</width>
       <height>321</height>
      </rect>
     </property>
@@ -120,7 +129,7 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>130</x>
       <y>90</y>
       <width>151</width>
       <height>21</height>
@@ -142,7 +151,7 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>60</x>
       <y>180</y>
       <width>111</width>
       <height>16</height>
@@ -150,22 +159,22 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Doctor phone-</string>
+     <string>Doctor phone</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>20</x>
       <y>90</y>
-      <width>221</width>
+      <width>331</width>
       <height>321</height>
      </rect>
     </property>
@@ -182,12 +191,12 @@ background-color: rgb(62, 62, 62);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_16">
+   <widget class="QLabel" name="name">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>60</x>
       <y>140</y>
-      <width>91</width>
+      <width>101</width>
       <height>20</height>
      </rect>
     </property>
@@ -201,7 +210,7 @@ background-color: rgb(62, 62, 62);</string>
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>60</x>
       <y>120</y>
       <width>91</width>
       <height>16</height>
@@ -209,20 +218,20 @@ background-color: rgb(62, 62, 62);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Doctor name-</string>
+     <string>Doctor name</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>60</x>
       <y>240</y>
       <width>101</width>
       <height>16</height>
@@ -230,20 +239,20 @@ background-color: rgb(62, 62, 62);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>specialization-</string>
+     <string>specialization</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_17">
+   <widget class="QLabel" name="phone">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>60</x>
       <y>200</y>
       <width>91</width>
       <height>16</height>
@@ -260,27 +269,27 @@ background-color: rgb(62, 62, 62);</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>300</y>
-      <width>201</width>
-      <height>16</height>
+      <y>290</y>
+      <width>61</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>appointment date and time-</string>
+     <string>gender</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_19">
+   <widget class="QLabel" name="gender">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>60</x>
       <y>320</y>
       <width>111</width>
       <height>16</height>
@@ -293,13 +302,198 @@ background-color: rgb(62, 62, 62);</string>
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_18">
+   <widget class="QLabel" name="specialization">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>60</x>
       <y>260</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>360</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>email</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="email">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>380</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>120</y>
       <width>91</width>
       <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>clinic name</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>180</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>   clinic address</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>240</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>fees</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>290</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>rating</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fees">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>260</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clinicname">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>140</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clinicaddress">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>200</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rating">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>310</y>
+      <width>91</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -320,13 +514,23 @@ background-color: rgb(62, 62, 62);</string>
    <zorder>listWidget_3</zorder>
    <zorder>label_11</zorder>
    <zorder>label_13</zorder>
-   <zorder>label_16</zorder>
+   <zorder>name</zorder>
    <zorder>label_12</zorder>
    <zorder>label_14</zorder>
-   <zorder>label_17</zorder>
+   <zorder>phone</zorder>
    <zorder>label_15</zorder>
-   <zorder>label_19</zorder>
-   <zorder>label_18</zorder>
+   <zorder>gender</zorder>
+   <zorder>specialization</zorder>
+   <zorder>label_6</zorder>
+   <zorder>email</zorder>
+   <zorder>label_21</zorder>
+   <zorder>label_22</zorder>
+   <zorder>label_23</zorder>
+   <zorder>label_24</zorder>
+   <zorder>fees</zorder>
+   <zorder>clinicname</zorder>
+   <zorder>clinicaddress</zorder>
+   <zorder>rating</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

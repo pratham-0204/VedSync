@@ -36,7 +36,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
         query.prepare("SELECT * FROM appointments WHERE pid = :pid AND prescription IS NOT NULL");
         query.bindValue(":pid", pacid);
 
-        if (query.exec()) {
+        if (query.exec() && query.next()) {
             while (query.next()) {
                 // Retrieve data from the query result
                 pdoc.push_back(query.value(0).toString());
@@ -45,9 +45,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
                 // Process the retrieved data as needed
             }
         }
-        else{
-            QMessageBox::information(this , "" ,"can't execute");
-        }
+
 
         query.prepare("select name from doctors where did = :id");
         for(int i = 0 ; i < pdoc.size() ; i++){
@@ -73,9 +71,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
                 // Process the retrieved data as needed
             }
         }
-        else{
-            QMessageBox::information(this , "" ,"can't execute");
-        }
+
         query.prepare("select * from doctors where did = :id");
         for(int i = 0 ; i < sheduleddoc.size() ; i++){
             query.bindValue(":id", sheduleddoc[i]);
@@ -89,11 +85,12 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
         for(int i = 0 ; i < sheduleddname.size() ; i++){
             ui->listWidget_2->addItem(sheduleddname[i]+" "+sheduledtime[i]);
         }
-
+        if(sheduleddname.size() >0){
         ui->label_16->setText(sheduleddname[0]);
         ui->label_17->setText(sheduleddoc[0]);
         ui->label_18->setText(vspecialization[0]);
         ui->label_19->setText(sheduledtime[0]);
+        }
 
 
         mydb.close();
@@ -188,6 +185,25 @@ void Dashboard_patient::on_pushButton_clicked()
 
 void Dashboard_patient::on_listWidget_itemClicked(QListWidgetItem *item)
 {
+    ui->listWidget_2->clear();
+    ui->listWidget_3->clear();
+    pdoc.clear();
+    dname.clear();
+    sheduleddname.clear();
+    sheduleddoc.clear();
+    prescriptions.clear();
+    historytime.clear();
+    sheduledtime.clear();
+    vspecialization.clear();
+    pdoc = std::vector<QString>();
+    dname = std::vector<QString>();
+    sheduleddname = std::vector<QString>();
+    sheduleddoc = std::vector<QString>();
+    prescriptions = std::vector<QString>();
+    historytime = std::vector<QString>();
+    sheduledtime = std::vector<QString>();
+    vspecialization = std::vector<QString>();
+
     int index = ui->listWidget->currentRow();
     QString arr[] = {pacid , paname , vid[index]};
     this->hide();

@@ -281,6 +281,9 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_11">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>650</x>
@@ -329,6 +332,9 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_12">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -350,6 +356,9 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_13">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -371,6 +380,9 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_14">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -392,6 +404,9 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_15">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -413,11 +428,14 @@ background-color: rgb(62, 62, 62);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_16">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>680</x>
       <y>160</y>
-      <width>91</width>
+      <width>111</width>
       <height>20</height>
      </rect>
     </property>
@@ -425,15 +443,18 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>no appointment yet</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_17">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>680</x>
       <y>220</y>
-      <width>91</width>
+      <width>111</width>
       <height>16</height>
      </rect>
     </property>
@@ -441,15 +462,18 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>no appointment yet</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_18">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>680</x>
       <y>280</y>
-      <width>91</width>
+      <width>111</width>
       <height>16</height>
      </rect>
     </property>
@@ -457,10 +481,13 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>no appointment yet</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_19">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>660</x>
@@ -473,7 +500,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>no appointment yet</string>
     </property>
    </widget>
   </widget>
