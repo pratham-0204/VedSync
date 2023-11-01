@@ -47,7 +47,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(170, 0, 0);</string>
+     <string notr="true">background-color: rgb(170, 0, 0);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Logout</string>
@@ -104,7 +105,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(118, 118, 118);</string>
+     <string notr="true">background-color: rgb(118, 118, 118);
+background-color: rgb(62, 62, 62);</string>
     </property>
     <property name="text">
      <string/>
@@ -186,7 +188,7 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(79, 79, 79);
-background-color: rgb(149, 149, 149);</string>
+background-color: rgb(62, 62, 62);</string>
     </property>
     <property name="text">
      <string/>

@@ -46,7 +46,11 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>welcome to VedSync</string>
+     <string>Welcome to 
+VedSync</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -111,7 +115,10 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>17</pointsize>
+      <pointsize>16</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
      </font>
     </property>
     <property name="styleSheet">

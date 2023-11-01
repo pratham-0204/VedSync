@@ -150,7 +150,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>search for doctors</string>
+     <string>Search for doctors</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -192,7 +192,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>city</string>
+     <string>City</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget">
@@ -215,7 +215,7 @@ background-color: rgb(62, 62, 62);</string>
      </rect>
     </property>
     <property name="text">
-     <string>search</string>
+     <string>Search</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
@@ -236,7 +236,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Sheduled Appointments</string>
+     <string>Scheduled Appointments</string>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget_2">
@@ -302,7 +302,7 @@ background-color: rgb(62, 62, 62);</string>
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>latest appointment</string>
+     <string>Latest Appointment</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
