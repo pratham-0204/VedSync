@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <dashboard_doctor.h>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 namespace Ui {
 class Active_appointment;
 }

@@ -67,19 +67,6 @@
      <string>Back</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>151</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Information</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
@@ -119,9 +106,9 @@
    <widget class="QListWidget" name="listWidget_3">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>370</x>
       <y>90</y>
-      <width>211</width>
+      <width>231</width>
       <height>321</height>
      </rect>
     </property>
@@ -507,7 +494,6 @@ background-color: rgb(62, 62, 62);</string>
    <zorder>label</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
-   <zorder>label_2</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
    <zorder>listWidget_2</zorder>

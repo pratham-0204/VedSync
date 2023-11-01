@@ -49,6 +49,14 @@ DoctorInfoAndAppointment::DoctorInfoAndAppointment(QWidget *parent , QString arr
     else{
         QMessageBox::information(this , "" , "not opened");
     }
+
+    qry.prepare("select * from appointments where pid = '"+arr[0]+"' and did = '"+arr[2]+"'");
+    if(qry.exec()){
+        while(qry.next()){
+            ui->listWidget_3->addItem(qry.value(3).toString());
+        }
+    }
+
     mydb.close();
 
 }
@@ -92,21 +100,23 @@ void DoctorInfoAndAppointment::on_pushButton_clicked()
         // Add 10 min to last datetime
         QDateTime desiredDateTime;
         if (lastAppointmentQuery.exec() && lastAppointmentQuery.next()) {
-            QDateTime lastAppointmentDateTime = lastAppointmentQuery.value(0).toDateTime();
-            QDateTime nextAppointmentDateTime = lastAppointmentDateTime.addSecs(600);  // 10 minutes in seconds
-
-            // If the next available appointment is within the doctor's working hours, use it.
-            if (nextAppointmentDateTime.time() <= doctorEndTime) {
-                desiredDateTime = nextAppointmentDateTime;
-            } else {
-                // If it's beyond the doctor's working hours, move to the next day and set it to the doctor's start time.
-                desiredDateTime = nextAppointmentDateTime.addDays(1);
+//            QMessageBox::information(this , "" , lastAppointmentQuery.value(0).toString() == "");
+            if (lastAppointmentQuery.value(0).toString() == ""){
+                desiredDateTime.setDate(QDate::currentDate().addDays(1));
                 desiredDateTime.setTime(doctorStartTime);
+            } else{
+                QDateTime lastAppointmentDateTime = lastAppointmentQuery.value(0).toDateTime();
+                QDateTime nextAppointmentDateTime = lastAppointmentDateTime.addSecs(600);  // 10 minutes in seconds
+
+                // If the next available appointment is within the doctor's working hours, use it.
+                if (nextAppointmentDateTime.time() <= doctorEndTime) {
+                    desiredDateTime = nextAppointmentDateTime;
+                } else {
+                    // If it's beyond the doctor's working hours, move to the next day and set it to the doctor's start time.
+                    desiredDateTime = nextAppointmentDateTime.addDays(1);
+                    desiredDateTime.setTime(doctorStartTime);
+                }
             }
-        } else {
-            // If no previous appointments exist for this doctor, set the appointment to the doctor's start time.
-            desiredDateTime.setDate(QDate::currentDate().addDays(1));
-            desiredDateTime.setTime(doctorStartTime);
         }
 
         // Insert the appointment into the database.

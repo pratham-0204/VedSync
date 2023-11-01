@@ -27,6 +27,8 @@ private slots:
 
     void on_Mark_btn_clicked();
 
+    void on_apointments_itemClicked(QListWidgetItem *item);
+
 private:
     Ui::Dashboard_doctor *ui;
     void closeAllQueriesAndTransactions();

@@ -175,3 +175,11 @@ void Dashboard_doctor::on_Mark_btn_clicked()
     update_window();
 }
 
+
+void Dashboard_doctor::on_apointments_itemClicked(QListWidgetItem *item)
+{
+    int index = ui->apointments->currentRow();
+    Active_appointment * w = new Active_appointment(this , p_id[index]);
+    w->show();
+}
+

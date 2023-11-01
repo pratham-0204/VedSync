@@ -105,9 +105,9 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>170</y>
-      <width>164</width>
+      <x>30</x>
+      <y>150</y>
+      <width>247</width>
       <height>161</height>
      </rect>
     </property>
@@ -120,7 +120,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Appointment date</string>
+        <string>Appointment date and time</string>
        </property>
       </widget>
      </item>
@@ -142,17 +142,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Appointment time</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_7">
-       <property name="text">
-        <string>&lt;appointment time&gt;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <string/>
        </property>
       </widget>
      </item>

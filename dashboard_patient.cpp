@@ -36,7 +36,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
         query.prepare("SELECT * FROM appointments WHERE pid = :pid AND prescription IS NOT NULL");
         query.bindValue(":pid", pacid);
 
-        if (query.exec() && query.next()) {
+        if (query.exec()) {
             while (query.next()) {
                 // Retrieve data from the query result
                 pdoc.push_back(query.value(0).toString());
@@ -49,6 +49,7 @@ Dashboard_patient::Dashboard_patient(QWidget *parent , QString q , QString name)
 
         query.prepare("select name from doctors where did = :id");
         for(int i = 0 ; i < pdoc.size() ; i++){
+
             query.bindValue(":id", pdoc[i]);
             if (query.exec() && query.next()) {
                 dname.push_back(query.value(0).toString());
