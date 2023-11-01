@@ -179,7 +179,40 @@ void Dashboard_doctor::on_Mark_btn_clicked()
 void Dashboard_doctor::on_apointments_itemClicked(QListWidgetItem *item)
 {
     int index = ui->apointments->currentRow();
-    Active_appointment * w = new Active_appointment(this , p_id[index]);
+    QString arr[] ={id , p_id[index] , p_name[index] , p_datetime[index]} ;
+    Active_appointment * w = new Active_appointment(this , arr);
     w->show();
+}
+
+
+void Dashboard_doctor::on_radioButton_clicked()
+{
+    if(ui->radioButton->isChecked()){
+        QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
+        QString path = QDir::toNativeSeparators(CURRENT);
+        QSqlQuery qry;
+        mydb.setDatabaseName(path);
+        if(mydb.open()){
+            qry.prepare("update doctors set availability = 0 where did = '"+id+"'");
+            qry.exec();
+        }
+        mydb.close();
+    }
+}
+
+
+void Dashboard_doctor::on_radioButton_2_clicked()
+{
+    if(ui->radioButton_2->isChecked()){
+        QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
+        QString path = QDir::toNativeSeparators(CURRENT);
+        QSqlQuery qry;
+        mydb.setDatabaseName(path);
+        if(mydb.open()){
+            qry.prepare("update doctors set availability = 1 where did = '"+id+"'");
+            qry.exec();
+        }
+        mydb.close();
+    }
 }
 

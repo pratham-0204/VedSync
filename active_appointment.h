@@ -16,7 +16,7 @@ class Active_appointment : public QMainWindow
 
 public:
     explicit Active_appointment(QWidget *parent = nullptr);
-    Active_appointment(QWidget *parent = nullptr , QString s = "");
+    Active_appointment(QWidget *parent = nullptr , QString s[] = {});
     ~Active_appointment();
 
 private slots:
