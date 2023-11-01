@@ -36,26 +36,13 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>320</y>
-      <width>49</width>
-      <height>16</height>
+      <y>330</y>
+      <width>61</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>shift -1</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_11">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>350</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>shift -2</string>
+     <string>shift time</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -256,20 +243,6 @@
          </item>
         </layout>
        </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_13">
-         <item>
-          <widget class="QLabel" name="label_15">
-           <property name="text">
-            <string>from</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTimeEdit" name="s2f"/>
-         </item>
-        </layout>
-       </item>
       </layout>
      </item>
      <item>
@@ -285,20 +258,6 @@
          </item>
          <item>
           <widget class="QTimeEdit" name="s1t"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_12">
-         <item>
-          <widget class="QLabel" name="label_14">
-           <property name="text">
-            <string>till</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTimeEdit" name="s2t"/>
          </item>
         </layout>
        </item>

@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <dashboard_patient.h>
+#include <QtSql>
+#include <QtDebug>
+#include <QFileInfo>
 namespace Ui {
 class DoctorInfoAndAppointment;
 }
@@ -18,6 +21,8 @@ public:
 
 private slots:
     void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::DoctorInfoAndAppointment *ui;
