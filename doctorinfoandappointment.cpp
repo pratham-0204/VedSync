@@ -33,17 +33,17 @@ DoctorInfoAndAppointment::DoctorInfoAndAppointment(QWidget *parent , QString arr
                 ui->pushButton->setEnabled(true);
                 ui->pushButton->setText("Reserve Appointment");
 
-                ui->phone->setText(qry.value(0).toString());
-                ui->email->setText(qry.value(5).toString());
-                ui->fees->setText(qry.value(10).toString());
-                ui->gender->setText(qry.value(3).toString());
-                ui->clinicaddress->setText(qry.value(7).toString());
-                ui->clinicname->setText(qry.value(6).toString());
-                ui->rating->setText(qry.value(13).toString());
-                ui->specialization->setText(qry.value(4).toString());
-                ui->label->setText(qry.value(1).toString());
-                ui->name->setText(qry.value(1).toString());
             }
+            ui->phone->setText(qry.value(0).toString());
+            ui->email->setText(qry.value(5).toString());
+            ui->fees->setText(qry.value(10).toString());
+            ui->gender->setText(qry.value(3).toString());
+            ui->clinicaddress->setText(qry.value(7).toString());
+            ui->clinicname->setText(qry.value(6).toString());
+            ui->rating->setText(qry.value(13).toString());
+            ui->specialization->setText(qry.value(4).toString());
+            ui->label->setText(qry.value(1).toString());
+            ui->name->setText(qry.value(1).toString());
         }
     }
     else{
